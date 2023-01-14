@@ -6,6 +6,15 @@ import theme from "../styles/theme";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { RecoilRoot, useRecoilState } from "recoil";
 import Background from "./components/background";
+import Login from "./components/login";
+import SignUp from "./components/signup";
+import Search from "./components/search";
+import Home from "./components/home";
+import Create from "./components/create";
+import Mypage from "./components/mypage";
+import Sell from "./components/sell";
+import Buy from "./components/buy";
+import Chat from "./components/chat";
 
 function App() {
   const queryClient = new QueryClient();
@@ -18,12 +27,15 @@ function App() {
           <BrowserRouter>
             <Background>
               <Routes>
-                <Route path="/" element={<>1234</>} />
-                <Route path="/" element={<></>} />
-                <Route path="/" element={<></>} />
-                <Route path="/" element={<></>} />
-                <Route path="/" element={<></>} />
-                <Route path="/" element={<></>} />
+                <Route path="/" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/create" element={<Create />} />
+                <Route path="/mypage" element={<Mypage />} />
+                <Route path="/sell" element={<Sell />} />
+                <Route path="/buy" element={<Buy />} />
+                <Route path="/chat" element={<Chat />} />
               </Routes>
             </Background>
           </BrowserRouter>
